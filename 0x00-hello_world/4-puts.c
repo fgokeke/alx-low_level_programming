@@ -2,11 +2,12 @@
 
 /**
  * puts - Prints ""Programming is like building a multilingual puzzle"
+ *
+ * Return: 0 if successful
  */
-int main (void)
+int main(void)
 {
-	const char *memo= "\"Programming is like building a multilingual puzzle";
-	
+	const char *memo = "\"Programming is like building a multilingual puzzle";
 	puts(memo);
 	return (0);
 }
