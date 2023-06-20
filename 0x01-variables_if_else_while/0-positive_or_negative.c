@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main is the main function */
+/** main is the main function 
+*/
 int main(void)
 {
 	int n;
