@@ -15,13 +15,12 @@ int main(void)
 	for (i = 48; i < 58; i++)
 	{
 		for (a = 48; a < 58; a++)
-		
 		{
 			if (i != a && i < a)
 			{
 				putchar(i);
 				putchar(a);
-				if (i != 57 || a != 57)
+				if (i != 56 || a != 57)
 				{
 					putchar(comma);
 					putchar(space);
@@ -31,5 +30,5 @@ int main(void)
 	}
 	putchar('\n');
 	
-	return (0);	
+	return (0);
 }
