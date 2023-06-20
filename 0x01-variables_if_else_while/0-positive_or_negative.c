@@ -4,6 +4,8 @@
 
 /**
  * main - is the main function
+ *
+ * Return: 0 for successful execution
  */
 int main(void)
 {
