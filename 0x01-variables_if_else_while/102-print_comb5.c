@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 
 /**
  * main - to print combinations of 2 2-digit numbers
