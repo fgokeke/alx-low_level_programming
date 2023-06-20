@@ -10,3 +10,4 @@
 9. Write a program that prints all possible combinations of single-digit numbers.
 100. Write a program that prints all possible different combinations of two digits.
 101. Write a program that prints all possible different combinations of three digits.
+102. Write a program that prints all possible combinations of two two-digit numbers.
