@@ -17,7 +17,6 @@ int main(void)
 		putchar(comma);
 		putchar(space);
 	}
-	putchar('\n');
 
 	return (0);
 }
