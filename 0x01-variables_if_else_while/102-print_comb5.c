@@ -13,6 +13,7 @@ int main(void)
 	int b;
 	int comma = 44;
 	int space = 32;
+	
 	for (a = 0; a <= 98; a++)
 	{
 		for (b = a + 1; b <= 99; b++)
