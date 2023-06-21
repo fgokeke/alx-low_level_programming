@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void - to print the alphabets
+ * print_alphabet - to print the alphabets
  *
  * Return: does not return a value
  */
@@ -16,6 +16,4 @@ void print_alphabet(void)
 		first_alph++;
 	}
 	_putchar('\n');
-
-	return;
 }
