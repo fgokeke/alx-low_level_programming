@@ -3,7 +3,7 @@
 /**
  * _islower - to check for lower class characters
  *
- * c - the character to be checked
+ * @c - the character to be checked
  *
  * Return: 0 on successful execution
  */
