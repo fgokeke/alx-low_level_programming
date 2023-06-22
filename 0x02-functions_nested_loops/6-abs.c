@@ -2,6 +2,7 @@
 
 /**
  * _abs - calculates the absolute value of the integer
+ *@a: the integer to be calculated
  *
  * Return: 0 on successful execution
  */
