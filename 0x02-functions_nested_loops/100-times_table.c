@@ -8,13 +8,9 @@
  */
 void print_times_table(int n)
 {
-	int a, b, c, d, e, f, g, p;
+	int a, b, p;
 
-	if (n > 15 || n < 0)
-	{
-		_putchar('\n');
-	}
-	else
+	if (n <= 15 && n >= 0)
 	{
 		for (a = 0; a <= n; a++)
 		{
@@ -23,24 +19,19 @@ void print_times_table(int n)
 				p = a * b;
 				if (p > 99)
 				{
-					c = p % 10;
-					d = (p / 10) % 10;
-					e = p / 100;
 					_putchar(',');
 					_putchar(' ');
-					_putchar(e + '0');
-					_putchar(d + '0');
-					_putchar(c + '0');
+					_putchar((p / 100) + '0');
+					_putchar(((p / 10) % 10) + '0');
+					_putchar((p % 10) + '0');
 				}
 				else if (p > 9)
 				{
-					f = p % 10;
-					g = p / 10;
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(g + '0');
-					_putchar(f + '0');
+					_putchar((p / 10) + '0');
+					_putchar((p % 10) + '0');
 				}
 				else
 				{
