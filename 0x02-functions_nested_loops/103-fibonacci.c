@@ -24,8 +24,8 @@ int main(void)
 		{
 			sum_a += next;
 			sum_b = sum_a + 2;
+			printf("%ld\n", sum_b);
 		}
-		printf("%ld\n", sum_b);
 	}
 	return (0);
 }
