@@ -10,8 +10,8 @@ int main(void)
 {
 	int i = 3;
 	int next;
-	int n1 = 1;
-	int n2 = 2;
+	long n1 = 1;
+	long n2 = 2;
 
 	printf("%d, ", n1);
 	printf("%d, ", n2);
