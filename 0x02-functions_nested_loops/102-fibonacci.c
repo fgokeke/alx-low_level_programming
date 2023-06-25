@@ -8,10 +8,13 @@
  */
 int main(void)
 {
-	int i;
+	int i = 3;
 	int next;
 	int n1 = 1;
 	int n2 = 2;
+
+	printf("%d, ", n1);
+	printf("%d, ", n2);
 
 	for (i = 3; i <= 50; i++)
 	{
