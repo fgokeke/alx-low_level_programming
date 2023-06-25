@@ -8,10 +8,10 @@
  */
 int main(void)
 {
-	unsigned int i = 3;
-	unsigned int n1 = 1;
-	unsigned int n2 = 2;
-	unsigned int next;
+	unsigned long int i = 3;
+	unsigned long int n1 = 1;
+	unsigned long int n2 = 2;
+	unsigned long int next;
 
 	printf("%u, ", n1);
 	printf("%u, ", n2);
