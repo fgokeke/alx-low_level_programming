@@ -16,12 +16,12 @@ int main(void)
 	printf("%lu, ", n1);
 	printf("%lu, ", n2);
 
-	for (i = 3; i <= 99; i++)
+	for (i = 3; i < 99; i++)
 	{
 		next = n1 + n2;
 		n1 = n2;
 		n2 = next;
-		if (i != 99)
+		if (i != 98)
 		{
 			printf("%lu, ", next);
 		}
