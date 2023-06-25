@@ -13,8 +13,8 @@ int main(void)
 	long int n1 = 1;
 	long int n2 = 2;
 
-	printf("%ld", n1);
-	printf("%ld", n2);
+	printf("%ld, ", n1);
+	printf("%ld, ", n2);
 
 	for (i = 3; i <= 50; i++)
 	{
