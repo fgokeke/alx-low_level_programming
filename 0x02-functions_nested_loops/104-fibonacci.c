@@ -9,12 +9,12 @@
 int main(void)
 {
 	int i = 3;
-	long int n1 = 1;
-	long int n2 = 2;
-	long int next;
+	int n1 = 1;
+	int n2 = 2;
+	int next;
 
-	printf("%ld, ", n1);
-	printf("%ld, ", n2);
+	printf("%d, ", n1);
+	printf("%d, ", n2);
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -23,11 +23,11 @@ int main(void)
 		n2 = next;
 		if (i != 98)
 		{
-			printf("%ld, ", next);
+			printf("%d, ", next);
 		}
 		else
 		{
-			printf("%ld", next);
+			printf("%d", next);
 		}
 	}
 	printf("\n");
