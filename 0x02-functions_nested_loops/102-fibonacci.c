@@ -21,7 +21,7 @@ int main(void)
 		next = n1 + n2;
 		n1 = n2;
 		n2 = next;
-		printf(", %ld", next);
+		printf("%ld, ", next);
 	}
 	printf("\n");
 
