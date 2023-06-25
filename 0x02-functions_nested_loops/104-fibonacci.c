@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	int c
-	unsigned long int f1 = 0, f22 = 1, sum;
+	int c;
+	unsigned long int f1 = 0, f2 = 1, sum;
 	unsigned long f1_h1, f1_h2, f2_h1, f2_h2;
 	unsigned long h1, h2;
 
@@ -31,7 +31,7 @@ int main(void)
 		if (f1_h2 + f2_h2 > 9999999999)
 		{
 			h1 += 1;
-			h2 %= 10000000000
+			h2 %= 10000000000;
 		}
 		printf("%lu%lu", h1, h2);
 		if (c != 98)
