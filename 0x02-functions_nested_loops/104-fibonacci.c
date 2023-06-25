@@ -13,8 +13,8 @@ int main(void)
 	unsigned long int n2 = 2;
 	unsigned long int next;
 
-	printf("%u, ", n1);
-	printf("%u, ", n2);
+	printf("%lu, ", n1);
+	printf("%lu, ", n2);
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -23,11 +23,11 @@ int main(void)
 		n2 = next;
 		if (i != 98)
 		{
-			printf("%u, ", next);
+			printf("%lu, ", next);
 		}
 		else
 		{
-			printf("%u", next);
+			printf("%lu", next);
 		}
 	}
 	printf("\n");
