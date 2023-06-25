@@ -8,26 +8,39 @@
  */
 int main(void)
 {
-	unsigned long int i = 3;
-	unsigned long int n1 = 1;
-	unsigned long int n2 = 2;
-	unsigned long int next;
+	int c
+	unsigned long int f1 = 0, f22 = 1, sum;
+	unsigned long f1_h1, f1_h2, f2_h1, f2_h2;
+	unsigned long h1, h2;
 
-	printf("%lu, ", n1);
-	printf("%lu, ", n2);
-
-	for (i = 3; i < 92; i++)
+	for (c = 0; c < 92; c++)
 	{
-		next = n1 + n2;
-		n1 = n2;
-		n2 = next;
-		if (i != 92)
+		sum = f1 + f2;
+		printf("%lu, ", sum);
+		f1 = f2;
+		f2 = sum;
+	}
+	f1_h1 = f1 / 10000000000;
+	f2_h1 = f2 / 10000000000;
+	f1_h2 = f1 % 10000000000;
+	f2_h2 = f2 % 10000000000;
+	for (c = 93; c < 99; c++)
+	{
+		h1 = f1_h1 + f2_h1;
+		h2 = f1_h2 + f2_h2;
+		if (f1_h2 + f2_h2 > 9999999999)
 		{
-			printf("%lu, ", next);
+			h1 += 1;
+			h2 %= 10000000000
 		}
-		else
+		printf("%lu%lu", h1, h2);
+		if (c != 98)
 		{
-			printf("%lu", next);
+			printf(", ");
+			f1_h1 = f2_h1;
+			f1_h2 = f2_h2;
+			f2_h1 = h1;
+			f2_h2 = h2;
 		}
 	}
 	printf("\n");
