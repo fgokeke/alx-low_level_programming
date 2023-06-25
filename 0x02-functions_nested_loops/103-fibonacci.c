@@ -9,7 +9,8 @@
 int main(void)
 {
 	int i = 3;
-	long int next, long int sum_b;
+	long int next;
+	long int sum_b;
 	long int n1 = 1;
 	long int n2 = 2;
 	long int sum_a = 0;
@@ -24,7 +25,7 @@ int main(void)
 			sum_a += next;
 			sum_b = sum_a + 2;
 		}
-		printf("%d\n", sum_b);
+		printf("%ld\n", sum_b);
 	}
 	return (0);
 }
