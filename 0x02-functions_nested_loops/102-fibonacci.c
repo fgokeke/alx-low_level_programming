@@ -10,11 +10,11 @@ int main(void)
 {
 	int i = 3;
 	long int next;
-	int n1 = 1;
-	int n2 = 2;
+	long int n1 = 1;
+	long int n2 = 2;
 
-	printf("%d", n1);
-	printf("%d", n2);
+	printf("%ld", n1);
+	printf("%ld", n2);
 
 	for (i = 3; i <= 50; i++)
 	{
