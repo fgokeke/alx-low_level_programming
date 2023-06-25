@@ -19,6 +19,7 @@ int main(void)
 	for (i = 3; i <= 98; i++)
 	{
 		next = n1 + n2;
+		n1 = n2;
 		n2 = next;
 		if (i != 98)
 		{
