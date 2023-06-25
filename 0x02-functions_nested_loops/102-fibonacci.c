@@ -21,7 +21,10 @@ int main(void)
 		next = n1 + n2;
 		n1 = n2;
 		n2 = next;
+		if (next != 20365011074)
+		{
 		printf("%ld, ", next);
+		}
 	}
 	printf("\n");
 
