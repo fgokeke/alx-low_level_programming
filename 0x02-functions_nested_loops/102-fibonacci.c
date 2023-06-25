@@ -24,10 +24,10 @@ int main(void)
 		if (next != 20365011074)
 		{
 			printf("%ld, ", next);
-			else
-			{
-			printf("%ld", next);
-			}
+		}
+		else
+		{
+		printf("%ld", next);
 		}
 	}
 	printf("\n");
