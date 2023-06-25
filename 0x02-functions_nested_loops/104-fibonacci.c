@@ -17,7 +17,7 @@ int main(void)
 	printf("%lu, ", n2);
 
 	for (i = 3; i <= 95; i++)
-	{iv
+	{
 		next = n1 + n2;
 		n1 = n2;
 		n2 = next;
