@@ -20,7 +20,7 @@ int main(void)
 	{
 		next = n1 + n2;
 		n2 = next;
-		if (next != 135301852344706746049)
+		if (i != 98)
 		{
 			printf("%ld, ", next);
 		}
