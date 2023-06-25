@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-	int i = 3;
-	int n1 = 1;
-	int n2 = 2;
-	int next;
+	unsigned int i = 3;
+	unsigned int n1 = 1;
+	unsigned int n2 = 2;
+	unsigned int next;
 
-	printf("%d, ", n1);
-	printf("%d, ", n2);
+	printf("%u, ", n1);
+	printf("%u, ", n2);
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -23,11 +23,11 @@ int main(void)
 		n2 = next;
 		if (i != 98)
 		{
-			printf("%d, ", next);
+			printf("%u, ", next);
 		}
 		else
 		{
-			printf("%d", next);
+			printf("%u", next);
 		}
 	}
 	printf("\n");
