@@ -19,10 +19,10 @@ int main(void)
 
 	for (a = 0; a < 100; a++)
 	{
-		password[a] = rand() % 100;
+		password[a] = rand() % 78;
 		sum +=(password[a] + '0');
 		putchar(password[a] + '0');
-		if ((2772 - sum) - '0' < 100)
+		if ((2772 - sum) - '0' < 78)
 		{
 			b = 2772 - sum - '0';
 			sum += b;
