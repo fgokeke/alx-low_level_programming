@@ -7,3 +7,4 @@
 6. Write a function that capitalizes all words of a string.
 7. Mozart composed his music not for the elite, but for everybody.
 100. Write a function that encodes a string using rot13.
+101. Write a function that prints an integer.
