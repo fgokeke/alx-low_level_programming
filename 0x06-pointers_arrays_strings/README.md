@@ -8,3 +8,4 @@
 7. Mozart composed his music not for the elite, but for everybody.
 100. Write a function that encodes a string using rot13.
 101. Write a function that prints an integer.
+102. Add one line to this code, so that the program prints a[2] = 98, followed by a new line.
