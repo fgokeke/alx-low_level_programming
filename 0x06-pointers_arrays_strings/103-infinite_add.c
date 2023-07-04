@@ -19,9 +19,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	snprintf(r, size_r, "%u", add);
 
-	if (size_r <= snprintf (NULL, 0, "%u", add))
+	if (size_r <= snprintf(NULL, 0, "%u", add))
 	{
-		return NULL;
+		return (NULL);
 	}
 	return (r);
 }
