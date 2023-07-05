@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * _strpbrk - Write a function that searches
- * a string for any of a set of bytes.
+ * _strpbrk - Write a function that searches a
+ * string for any of a set of bytes.
  * @s: string to be considered.
  * @accept: the source string.
  *
