@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - set_string
+ * set_string - a function that sets the value of a pointer to a char.
  * @s: double pointer to s.
- * @t: pointer to 'to'
+ * @to: pointer to 'to'
  *
  * Return: No return value.
  */
