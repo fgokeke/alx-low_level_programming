@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * factorial -  a function that returns the
+ * factorial of a given number.
+ * @n: the number to be considered.
+ *
+ * Return: the value of the factorial.
+ */
 int factorial(int n)
 {
 	if (n < 0)
