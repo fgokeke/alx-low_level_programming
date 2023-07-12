@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,13 +14,9 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 	while (s1[L1])
 	{
 		L1++;
@@ -32,6 +27,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	str_length = L1 + L2;
 	str = malloc((str_length + 1) * sizeof(char));
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < str_length; i++)
 	{
 		str[i] = s1[i];
@@ -43,8 +42,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[j] != '\0')
 	{
 		str[k] = s2[j];
-		k++;
-		j++;
+		k++, j++;
 	}
 	str[i] = '\0';
 
