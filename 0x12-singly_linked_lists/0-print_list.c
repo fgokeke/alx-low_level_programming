@@ -3,30 +3,6 @@
 #include "lists.h"
 
 /**
- * count_nodes - to count the number of nodes in a list.
- * @h: pointer to the list_t.
- *
- * Return: amount of nodes.
- */
-int count_nodes(const list_t *h)
-{
-	int count = 0;
-	list_t const *ptr;
-
-	if (h == NULL)
-	{
-		printf("empty linked lists");
-	}
-	ptr = h;
-	while (ptr != NULL)
-	{
-		count++;
-		ptr = ptr->next;
-	}
-	return (count);
-}
-
-/**
  * print_list - print the nodes of a list_t.
  * @h: pointer to the list_t to be considered.
  *
@@ -34,7 +10,7 @@ int count_nodes(const list_t *h)
  */
 size_t print_list(const list_t *h)
 {
-	size_t node_amount = count_nodes(h);
+	size_t node_amount = 0;
 	list_t const *ptr;
 
 	if (h == NULL)
@@ -43,17 +19,16 @@ size_t print_list(const list_t *h)
 
 	}
 	ptr = h;
-	while (ptr != NULL)
+	while (ptr)
 	{
-		if (ptr->str != NULL)
-		{
-			printf("[%u] %s\n", ptr->len, ptr->str);
-		}
-		else
-		{
+		if (ptr->str == NULL)
 			printf("[0] (nil)\n");
-		}
+
+		else
+			printf("[%u] %s\n", ptr->len, ptr->str);
+
 		ptr = ptr->next;
+		node_amount++;
 	}
 
 	return (node_amount);
