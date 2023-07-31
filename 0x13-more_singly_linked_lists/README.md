@@ -27,3 +27,9 @@ Return: the address of the new element, or NULL if it failed
 Write a function that frees a listint_t list.
 
 Prototype: void free_listint(listint_t *head);
+
+5. Free
+Write a function that frees a listint_t list.
+
+Prototype: void free_listint2(listint_t **head);
+The function sets the head to NULL
