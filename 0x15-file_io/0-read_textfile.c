@@ -13,28 +13,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file;
+	ssize_t fd;
 	char *buffer;
 	ssize_t bytes_read, bytes_written;
 
 	if (filename == NULL)
 		return (0);
 
-	file = fopen(filename, "r");
-	if (file == NULL)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
 
-	buffer = malloc(letters + 1);
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 	{
-		fclose(file);
+		close(fd);
 		return (0);
 	}
-	bytes_read = fread(buffer, sizeof(char), letters, file);
+	bytes_read = read(fd, buffer, letters);
 	if (bytes_read == -1)
 	{
 		free(buffer);
-		fclose(file);
+		close(fd);
 		return (0);
 	}
 	write(STDOUT_FILENO, buffer, bytes_read);
@@ -42,11 +42,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (bytes_written == -1 || bytes_written != bytes_read)
 	{
 		free(buffer);
-		fclose(file);
+		close(fd);
 		return (0);
 	}
 	free(buffer);
-	fclose(file);
+	close(fd);
 
 	return (bytes_written);
 }
