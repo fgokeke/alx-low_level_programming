@@ -74,6 +74,7 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 		bytes_read = read(fd_from, buffer, 1024);
+		fd_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	free(buffer);
 	close_fd(fd_from);
