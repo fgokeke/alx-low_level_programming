@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 	bytes_read = read(fd_from, buffer, 1024);
 	if (fd_from == -1 || bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written == -1 || fd_to == -1)
 		{
-			dprintf(STDERR_FILENO, "Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		bytes_read = read(fd_from, buffer, 1024);
