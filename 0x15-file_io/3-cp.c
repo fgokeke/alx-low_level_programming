@@ -57,31 +57,23 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	fd_from = open(argv[1], O_RDONLY);
-	if (fd_from == -1)
+	buffer = create_buf(argv[2]);
+	bytes_read = read(fd_from, buffer, 1024);
+	if (fd_from == -1 || bytes_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fd_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Can't write to file %s\n", argv[2]);
-		exit(99);
-	}
-	buffer = create_buf(argv[2]);
-	while ((bytes_read = read(fd_from, buffer, sizeof(buffer))) > 0)
+	while (bytes_read > 0)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
-		if (bytes_written == -1)
+		if (bytes_written == -1 || fd_to == -1)
 		{
 			dprintf(STDERR_FILENO, "Can't write to file %s\n", argv[2]);
 			exit(99);
 		}
-	}
-	if (bytes_read == -1)
-	{
-		dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
-		exit(98);
+		bytes_read = read(fd_from, buffer, 1024);
 	}
 	free(buffer);
 	close_fd(fd_from);
