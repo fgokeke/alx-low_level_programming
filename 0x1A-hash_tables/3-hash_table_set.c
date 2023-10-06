@@ -13,19 +13,19 @@ hash_node_t *create_element(const char *key, const char *value)
 
 	if (element == NULL)
 	{
-		free(element);
 		return (NULL);
 	}
 	element->key = (char *) malloc(strlen(key) + 1);
 	if (element->key == NULL)
 	{
-		free(element->key);
+		free(element);
 		return (NULL);
 	}
 	element->value = (char *) malloc(strlen(value) + 1);
 	if (element->value == NULL)
 	{
-		free(element->value);
+		free(element->key);
+		free(element);
 		return (NULL);
 	}
 	strcpy(element->key, key);
@@ -47,35 +47,43 @@ hash_node_t *create_element(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	const char *value_dup = strdup(value);
+	char *value_dup, *key_dup, *new_value;
 	hash_node_t *current_element, *element;
 
-	if (ht == NULL || key == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
-	element = create_element(key, value_dup);
-	if (element == NULL)
-		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
 	current_element = ht->array[index];
-	if (current_element == NULL)
+	while (current_element != NULL)
 	{
-		ht->array[index] = element;
-	}
-	else
-	{
-		while (current_element != NULL)
+		if (strcmp(current_element->key, key) == 0)
 		{
-			if (strcmp(current_element->key, key) == 0)
-			{
-				strcpy(ht->array[index]->value, value);
-				return (1);
-			}
-			current_element = current_element->next;
+			new_value = strdup(value);
+			if (new_value == NULL)
+				return (0);
+			free(current_element->value);
+			current_element->value = new_value;
+			return (1);
 		}
-		element->next = ht->array[index];
-		ht->array[index] = element;
+		current_element = current_element->next;
 	}
+	key_dup = strdup(key);
+	if (key_dup == NULL)
+		return (0);
+	value_dup = strdup(value);
+	if (value_dup == NULL)
+	{
+		free(key_dup);
+		return (0);
+	}
+	element = create_element(key_dup, value_dup);
+	if (element == NULL)
+	{
+		free(key_dup);
+		free(value_dup);
+		return (0);
+	}
+	element->next = ht->array[index];
+	ht->array[index] = element;
 	return (1);
 }
