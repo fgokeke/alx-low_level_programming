@@ -8,9 +8,6 @@ RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c
-	$(CC) $(GFLAGS) -c -o $@ $<
-
 clean:
 	$(RM) *~ $(NAME)
 
